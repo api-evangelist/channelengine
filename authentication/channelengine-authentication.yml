@@ -1,0 +1,31 @@
+generated: '2026-07-18'
+method: searched
+source: https://support.channelengine.com/hc/en-us/articles/4409515268637-Merchant-API-before-you-start
+docs: https://support.channelengine.com/hc/en-us/articles/32426668116125-ChannelEngine-get-API-access
+summary:
+  types: [apiKey]
+  api_key_in: [query]
+  api_key_name: apikey
+  oauth2_flows: []
+schemes:
+- name: ApiKeyAuth
+  type: apiKey
+  in: query
+  parameter: apikey
+  description: >-
+    All Merchant API and Channel API calls are authenticated with a per-tenant
+    API key passed as the `apikey` query parameter. Generate the key in the
+    ChannelEngine web app under Settings > Merchant API keys. ChannelEngine
+    warns that passing the key in the URL can be logged by intermediaries, so
+    treat keys as secrets and rotate as needed. The base URL is
+    https://{subdomain}.channelengine.net/api (append your tenant subdomain).
+  apis: [Merchant API, Channel API, Channel Management API]
+platform_sso:
+  note: >-
+    Distinct from API-key data access, the ChannelEngine web application is
+    secured by an OpenID Connect identity provider at login.channelengine.net.
+    This is not used to call the data APIs.
+  issuer: https://login.channelengine.net/
+  grant_types: [client_credentials, authorization_code, refresh_token]
+  scopes: [openid, offline_access, email, roles, profile, permissions]
+  discovery: well-known/channelengine-openid-configuration.json
