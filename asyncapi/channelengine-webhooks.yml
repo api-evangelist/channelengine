@@ -1,0 +1,33 @@
+generated: '2026-07-18'
+method: searched
+source: https://support.channelengine.com/hc/en-us/articles/4409484854173-ChannelEngine-webhooks
+type: Webhooks
+spec_type: webhook-catalog
+note: >-
+  ChannelEngine does not publish an AsyncAPI document, but it documents a
+  configurable webhook surface. Webhooks are created/managed via the Merchant
+  API Webhook operations (webhooksCreate, webhooksGetAll, webhooksUpdate,
+  webhooksDelete) or in the web app, and notify a subscriber URL when the
+  selected resource changes. Captured as a webhook catalog (type: Webhooks).
+management:
+  api: Merchant API
+  operations: [webhooksCreate, webhooksGetAll, webhooksUpdate, webhooksDelete]
+  see: mcp/channelengine-mcp.yml
+events:
+- name: Orders create
+  trigger: A new order is created.
+- name: Orders change
+  trigger: An existing order changes.
+- name: Products change
+  trigger: A change occurs in the product feed.
+- name: Product bundles change
+  trigger: A product bundle changes.
+- name: Returns change
+  trigger: A return is created or updated.
+- name: Shipments change
+  trigger: A shipment is created or updated.
+- name: Notifications create
+  trigger: A new notification is generated.
+delivery:
+  transport: https-webhook
+  subscriber: merchant-provided callback URL

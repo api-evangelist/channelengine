@@ -1,0 +1,18 @@
+generated: '2026-07-18'
+method: searched
+probe: true
+source: https://www.channelengine.com/security
+url: https://www.channelengine.com/security
+certifications:
+- ISO 27001
+- GDPR
+responsible_disclosure:
+  program: Responsible Disclosure Program
+  url: https://www.channelengine.com/security
+evidence:
+- source: https://www.channelengine.com/security
+  keywords:
+  - trust center
+  - gdpr
+- source: https://www.channelengine.com/security
+  detail: ISO/IEC 27001 certified since 2022; Responsible Disclosure Program published.

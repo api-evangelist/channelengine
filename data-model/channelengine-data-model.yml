@@ -1,0 +1,94 @@
+generated: '2026-07-18'
+method: derived
+source: >-
+  Derived from the ChannelEngine Merchant API and Channel API operation surface
+  (channelengine/merchant-api-client-php, channel-api-client-php) and the
+  Help Center object references.
+note: >-
+  Entities and relationships derived from the documented resource operations and
+  identifier model. No raw OpenAPI is committed in this repo (the provider
+  retired the public swagger download in the 2026-06 Scalar migration), so
+  relationships are derived from resource semantics rather than $ref graphs.
+identifiers:
+- field: MerchantProductNo
+  entity: Product
+  description: Merchant's own product identifier; the upsert key for products.
+- field: MerchantOrderNo
+  entity: Order
+  description: Merchant's own order identifier.
+- field: ChannelOrderNo
+  entity: Order
+  description: Marketplace/channel order identifier.
+- field: MerchantShipmentNo
+  entity: Shipment
+- field: MerchantReturnNo
+  entity: Return
+entities:
+- name: Product
+  operations: [productCreate, productPatch, productBulkPatch, productBulkDelete, productDelete, productGetByFilter, productGetByMerchantProductNo]
+  relationships:
+  - has_many: Offer
+    via: MerchantProductNo
+  - has_many: ProductBundle
+    via: MerchantProductNo
+- name: Offer
+  operations: [offerGetStock, offerStockUpdate, offerStockPriceUpdate]
+  relationships:
+  - belongs_to: Product
+    via: MerchantProductNo
+  - has_many: CompetitionPrice
+    via: MerchantProductNo
+- name: ListedProduct
+  operations: [listedProductGetByFilter]
+  relationships:
+  - belongs_to: Product
+    via: MerchantProductNo
+- name: ProductBundle
+  operations: [productBundleGetByFilter]
+  relationships:
+  - belongs_to: Product
+    via: MerchantProductNo
+- name: CompetitionPrice
+  operations: [competitionPricesGetBuyBoxPrices]
+  relationships:
+  - belongs_to: Offer
+    via: MerchantProductNo
+- name: Order
+  operations: [orderGetNew, orderGetByFilter, orderAcknowledge, orderUpdate, orderInvoice, orderPackingSlip]
+  relationships:
+  - has_many: Shipment
+    via: MerchantOrderNo
+  - has_many: Return
+    via: MerchantOrderNo
+  - has_many: Cancellation
+    via: MerchantOrderNo
+  - has_many: OrderLine
+    via: MerchantOrderNo
+- name: Shipment
+  operations: [shipmentCreate, shipmentCreateForChannelMethod, shipmentIndex, shipmentUpdate, shipmentShippingLabel, shipmentGetShipmentLabelCarriers]
+  relationships:
+  - belongs_to: Order
+    via: MerchantOrderNo
+- name: Return
+  operations: [returnGetReturns, returnGetUnhandled, returnGetDeclaredByChannel, returnGetByMerchantOrderNo, returnDeclareForMerchant, returnAcknowledge, returnUpdateForMerchant]
+  relationships:
+  - belongs_to: Order
+    via: MerchantOrderNo
+- name: Cancellation
+  operations: [cancellationCreate, cancellationGetForMerchant]
+  relationships:
+  - belongs_to: Order
+    via: MerchantOrderNo
+- name: StockLocation
+  operations: [stockLocationCreate, stockLocationIndex]
+  relationships:
+  - has_many: Offer
+    via: StockLocationId
+- name: Webhook
+  operations: [webhooksCreate, webhooksGetAll, webhooksUpdate, webhooksDelete]
+- name: Channel
+  operations: [channelPluginsGet]
+- name: Notification
+  operations: [notificationIndex]
+- name: Settings
+  operations: [settingsGet]

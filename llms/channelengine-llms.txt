@@ -1,0 +1,38 @@
+# ChannelEngine
+
+> ChannelEngine is a marketplace integration and multichannel e-commerce platform (Leiden, Netherlands; backed by General Catalyst) that lets brands and retailers connect their ERP, PIM, WMS, or webstore once and sell across 1,300+ marketplaces and channels. It exposes three REST APIs — Merchant, Channel, and Channel Management — with API-key auth, JSON envelopes, page-based pagination, header-based rate limiting, and webhooks.
+
+## APIs
+
+- [Merchant API](https://support.channelengine.com/hc/en-us/sections/4406511272733-Merchant-API): Integrate your own systems (ERP/PIM/WMS/webstore); sync products, offers, orders, shipments, returns, cancellations, stock, bundles, webhooks.
+- [Channel API](https://support.channelengine.com/hc/en-us/sections/4406503369629-Channel-API): Build your own marketplace on ChannelEngine; sync product/offer changes, create/invoice orders, handle shipments/returns/cancellations.
+- [Channel Management API](https://support.channelengine.com/hc/en-us/articles/4409485647901-ChannelEngine-connect-to-the-Channel-Management-API): Export marketplace categories and product attributes to ChannelEngine.
+
+## Getting started
+
+- [API references (Scalar)](https://support.channelengine.com/hc/en-us/articles/25437375786013-ChannelEngine-API-references)
+- [Merchant API: getting started](https://support.channelengine.com/hc/en-us/articles/10023835402397-Merchant-API-getting-started)
+- [Get API access](https://support.channelengine.com/hc/en-us/articles/32426668116125-ChannelEngine-get-API-access)
+- [Merchant API: conventions](https://support.channelengine.com/hc/en-us/articles/10024576041629-Merchant-API-conventions)
+- [Rate limiting](https://support.channelengine.com/hc/en-us/articles/10027638693405-Merchant-API-rate-limiting)
+- [Errors and response codes](https://support.channelengine.com/hc/en-us/articles/10027831228829-Merchant-API-errors-and-response-codes)
+- [Webhooks](https://support.channelengine.com/hc/en-us/articles/4409484854173-ChannelEngine-webhooks)
+- [Developer hub](https://www.channelengine.com/developer-hub)
+
+## Auth
+
+- API-key: pass the `apikey` query parameter (Settings > Merchant API keys). Base URL `https://{subdomain}.channelengine.net/api`.
+- Platform SSO (web app only): OpenID Connect at https://login.channelengine.net/.well-known/openid-configuration
+
+## SDKs
+
+- First-party OpenAPI-generated clients (now deprecated; generate your own via OpenAPI Generator): PHP, C#, Python, Java, Ruby, Swift, JS — https://github.com/channelengine
+- E-commerce connectors: Magento 2 / Adobe Commerce, WooCommerce.
+
+## Operational
+
+- [Status page](https://status.channelengine.com/)
+- [Release notes](https://support.channelengine.com/hc/en-us/articles/4409484849309-ChannelEngine-release-notes) (three-weekly cadence)
+- [Pricing](https://www.channelengine.com/pricing)
+- [Security & compliance](https://www.channelengine.com/security) (ISO 27001 since 2022, GDPR)
+- [Privacy policy](https://www.channelengine.com/privacy-policy/)

@@ -1,0 +1,29 @@
+generated: '2026-07-18'
+method: searched
+source: https://support.channelengine.com/hc/en-us/articles/4409484849309-ChannelEngine-release-notes
+versioning:
+  scheme: uri-path
+  current: v2
+  docs: https://support.channelengine.com/hc/en-us/articles/25437375786013-ChannelEngine-API-references
+release_cadence:
+  scheme: three-weekly
+  description: >-
+    ChannelEngine runs a three-week release cycle: two weeks of feature
+    development and a third week for deploying code, innovation projects and
+    debugging.
+  release_notes: https://support.channelengine.com/hc/en-us/articles/4409484849309-ChannelEngine-release-notes
+deprecation:
+  policy: >-
+    ChannelEngine deprecates and retires API surfaces over time (e.g. the legacy
+    REST API client for channels and the pre-generated SDK clients were retired
+    in favor of OpenAPI-Generator self-service, and the API reference moved from
+    Swagger/Redoc to Scalar on 2026-06-30). Deprecations are announced via
+    release notes and Help Center articles.
+  announced_via: [release-notes, help-center]
+  examples:
+  - REST API client for channels (retired)
+  - Pre-generated language SDK clients (deprecated 2024; generate from OpenAPI)
+  - Swagger/Redoc API reference (replaced by Scalar 2026-06-30)
+sla:
+  status_page: https://status.channelengine.com/
+status_page: https://status.channelengine.com/

@@ -1,0 +1,135 @@
+generated: '2026-07-18'
+method: derived
+status: candidate
+source: >-
+  Derived from the ChannelEngine Merchant API operation surface
+  (channelengine/merchant-api-client-php). No official hosted MCP server was
+  found; this is a candidate tool list for building one.
+server:
+  name: channelengine
+  transport: http
+  auth: apikey (query parameter), tenant base https://{subdomain}.channelengine.net/api
+tools:
+- name: list_new_orders
+  description: Get new orders that have not yet been acknowledged.
+  source_operation: Merchant API#orderGetNew
+- name: search_orders
+  description: Get orders by filter.
+  source_operation: Merchant API#orderGetByFilter
+- name: acknowledge_order
+  description: Acknowledge receipt of an order.
+  source_operation: Merchant API#orderAcknowledge
+- name: update_order
+  description: Update an order.
+  source_operation: Merchant API#orderUpdate
+- name: get_order_invoice
+  description: Retrieve an order invoice.
+  source_operation: Merchant API#orderInvoice
+- name: get_order_packing_slip
+  description: Retrieve an order packing slip.
+  source_operation: Merchant API#orderPackingSlip
+- name: upsert_product
+  description: Create or update a product (upsert keyed on MerchantProductNo).
+  source_operation: Merchant API#productCreate
+- name: patch_product
+  description: Partially update a product.
+  source_operation: Merchant API#productPatch
+- name: bulk_patch_products
+  description: Partially update products in bulk.
+  source_operation: Merchant API#productBulkPatch
+- name: delete_product
+  description: Delete a product.
+  source_operation: Merchant API#productDelete
+- name: bulk_delete_products
+  description: Delete products in bulk.
+  source_operation: Merchant API#productBulkDelete
+- name: search_products
+  description: Get products by filter.
+  source_operation: Merchant API#productGetByFilter
+- name: get_product_by_merchant_no
+  description: Get a product by its MerchantProductNo.
+  source_operation: Merchant API#productGetByMerchantProductNo
+- name: get_offer_stock
+  description: Get stock for offers.
+  source_operation: Merchant API#offerGetStock
+- name: update_offer_stock
+  description: Update offer stock (absolute values).
+  source_operation: Merchant API#offerStockUpdate
+- name: update_offer_stock_price
+  description: Update offer stock and price.
+  source_operation: Merchant API#offerStockPriceUpdate
+- name: get_buybox_prices
+  description: Get competition (buy box) prices.
+  source_operation: Merchant API#competitionPricesGetBuyBoxPrices
+- name: list_listed_products
+  description: Get listed products by filter.
+  source_operation: Merchant API#listedProductGetByFilter
+- name: list_product_bundles
+  description: Get product bundles by filter.
+  source_operation: Merchant API#productBundleGetByFilter
+- name: create_shipment
+  description: Create a shipment.
+  source_operation: Merchant API#shipmentCreate
+- name: create_shipment_for_channel_method
+  description: Create a shipment using a channel shipping method.
+  source_operation: Merchant API#shipmentCreateForChannelMethod
+- name: list_shipments
+  description: Get shipments.
+  source_operation: Merchant API#shipmentIndex
+- name: update_shipment
+  description: Update a shipment.
+  source_operation: Merchant API#shipmentUpdate
+- name: get_shipping_label
+  description: Retrieve a shipping label.
+  source_operation: Merchant API#shipmentShippingLabel
+- name: get_label_carriers
+  description: Get carriers available for shipment labels.
+  source_operation: Merchant API#shipmentGetShipmentLabelCarriers
+- name: list_returns
+  description: Get returns.
+  source_operation: Merchant API#returnGetReturns
+- name: list_unhandled_returns
+  description: Get unhandled returns.
+  source_operation: Merchant API#returnGetUnhandled
+- name: declare_return
+  description: Declare a merchant return.
+  source_operation: Merchant API#returnDeclareForMerchant
+- name: acknowledge_return
+  description: Acknowledge a return.
+  source_operation: Merchant API#returnAcknowledge
+- name: update_return
+  description: Update a merchant return.
+  source_operation: Merchant API#returnUpdateForMerchant
+- name: create_cancellation
+  description: Create an order cancellation.
+  source_operation: Merchant API#cancellationCreate
+- name: list_cancellations
+  description: Get cancellations for the merchant.
+  source_operation: Merchant API#cancellationGetForMerchant
+- name: create_stock_location
+  description: Create a stock location.
+  source_operation: Merchant API#stockLocationCreate
+- name: list_stock_locations
+  description: Get stock locations.
+  source_operation: Merchant API#stockLocationIndex
+- name: list_channels
+  description: Get configured channel plugins.
+  source_operation: Merchant API#channelPluginsGet
+- name: list_notifications
+  description: Get notifications.
+  source_operation: Merchant API#notificationIndex
+- name: get_settings
+  description: Get merchant settings.
+  source_operation: Merchant API#settingsGet
+- name: create_webhook
+  description: Create a webhook subscription.
+  source_operation: Merchant API#webhooksCreate
+- name: list_webhooks
+  description: Get all webhook subscriptions.
+  source_operation: Merchant API#webhooksGetAll
+- name: update_webhook
+  description: Update a webhook subscription.
+  source_operation: Merchant API#webhooksUpdate
+- name: delete_webhook
+  description: Delete a webhook subscription.
+  source_operation: Merchant API#webhooksDelete

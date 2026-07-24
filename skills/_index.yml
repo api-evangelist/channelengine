@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: generated
+source: >-
+  Generated from the ChannelEngine Merchant API operation surface and the
+  captured conventions/errors/webhooks artifacts. Every operationId is real and
+  drawn from channelengine/merchant-api-client-php.
+skills:
+- file: channelengine-fulfill-orders.md
+  name: Fulfill new ChannelEngine orders
+  api: ChannelEngine Merchant API
+  operations: [orderGetNew, orderAcknowledge, shipmentCreate, shipmentGetShipmentLabelCarriers, shipmentShippingLabel]
+- file: channelengine-sync-catalog.md
+  name: Sync product catalog and stock to ChannelEngine
+  api: ChannelEngine Merchant API
+  operations: [productCreate, productGetByFilter, offerStockUpdate, offerStockPriceUpdate, listedProductGetByFilter]
+- file: channelengine-handle-returns.md
+  name: Handle ChannelEngine returns and cancellations
+  api: ChannelEngine Merchant API
+  operations: [returnGetUnhandled, returnGetReturns, returnDeclareForMerchant, returnAcknowledge, returnUpdateForMerchant, cancellationCreate]
+- file: channelengine-manage-webhooks.md
+  name: Subscribe to ChannelEngine webhooks
+  api: ChannelEngine Merchant API
+  operations: [webhooksCreate, webhooksGetAll, webhooksUpdate, webhooksDelete]

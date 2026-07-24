@@ -1,0 +1,28 @@
+generated: '2026-07-18'
+method: searched
+source: https://support.channelengine.com/hc/en-us/articles/4409484849309-ChannelEngine-release-notes
+scheme: release-notes
+cadence: three-weekly
+release_notes_url: https://support.channelengine.com/hc/en-us/articles/4409484849309-ChannelEngine-release-notes
+current_version: v2
+note: >-
+  ChannelEngine publishes product and API release notes through its Help Center
+  on a three-week release cadence rather than a single machine-readable
+  changelog feed. Notable recent, dated platform changes captured from the
+  provider surface:
+entries:
+- date: '2026-06-30'
+  type: change
+  highlights:
+  - >-
+    API reference platform switched to Scalar, replacing Swagger UI and Redoc
+    with a single interactive reference; OpenAPI specs remain downloadable.
+  breaking: false
+- date: '2024'
+  type: deprecation
+  highlights:
+  - >-
+    Pre-generated language SDK clients (PHP, C#, Python, Java, Ruby, Swift, JS)
+    deprecated; users generate clients from the OpenAPI spec with OpenAPI
+    Generator.
+  breaking: false

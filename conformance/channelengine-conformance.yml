@@ -1,0 +1,38 @@
+generated: '2026-07-18'
+method: searched
+source:
+- https://support.channelengine.com/hc/en-us/articles/25437375786013-ChannelEngine-API-references
+- https://www.channelengine.com/security
+standards:
+- id: openapi
+  conforms: true
+  evidence: >-
+    APIs are published as OpenAPI/Swagger specifications; clients are generated
+    via OpenAPI Generator; reference rendered with Scalar.
+- id: rest
+  conforms: true
+  evidence: Resource-oriented URLs, form/JSON bodies, JSON responses.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors use HTTP status + a StatusCode/Message/ValidationErrors envelope, not problem+json.
+- id: oauth2
+  conforms: false
+  evidence: Data APIs use API-key (apikey query param) auth; OAuth2/OIDC is only the web-app identity provider.
+- id: oidc
+  conforms: partial
+  evidence: login.channelengine.net exposes OIDC discovery for platform SSO, not for data-API access.
+- id: webhooks
+  conforms: true
+  evidence: Provider documents configurable webhooks for orders, products, returns, shipments, notifications and bundles.
+- id: pagination
+  conforms: true
+  evidence: Page-number pagination with Content/Count/TotalCount/ItemsPerPage, max 100 per page.
+- id: rate-limiting
+  conforms: true
+  evidence: x-rate-limit-limit / x-rate-limit-remaining / retry-after headers, 429 on exceed.
+- id: iso-27001
+  conforms: true
+  evidence: ChannelEngine has held ISO/IEC 27001 certification since 2022.
+- id: gdpr
+  conforms: true
+  evidence: Full alignment with GDPR / applicable privacy law; privacy-by-design; DPA published.

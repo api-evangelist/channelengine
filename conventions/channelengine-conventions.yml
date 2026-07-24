@@ -1,0 +1,81 @@
+generated: '2026-07-18'
+method: searched
+source: https://support.channelengine.com/hc/en-us/articles/10024576041629-Merchant-API-conventions
+docs:
+- https://support.channelengine.com/hc/en-us/articles/10024576041629-Merchant-API-conventions
+- https://support.channelengine.com/hc/en-us/articles/4409515293981-Merchant-API-best-practices
+- https://support.channelengine.com/hc/en-us/articles/4600430872349-ChannelEngine-pagination-in-the-APIs
+- https://support.channelengine.com/hc/en-us/articles/10027638693405-Merchant-API-rate-limiting
+authentication:
+  style: api-key
+  location: query
+  parameter: apikey
+  see: authentication/channelengine-authentication.yml
+base_url: https://{subdomain}.channelengine.net/api
+media_type: application/json
+response_envelope:
+  description: >-
+    Every response is wrapped in a standard envelope. Collection responses add
+    pagination fields alongside the Content array.
+  fields:
+  - StatusCode
+  - LogId
+  - Success
+  - Message
+  - ValidationErrors
+  - Content
+  collection_fields:
+  - Content
+  - Count
+  - TotalCount
+  - ItemsPerPage
+  note: >-
+    On HTTP 200 for bulk product/offer submissions, still inspect Message /
+    ValidationErrors — individual items in a batch can fail validation while the
+    request succeeds overall.
+pagination:
+  style: page-number
+  request_param: Page
+  page_size: 100
+  page_size_fixed: true
+  response_fields: [Content, Count, TotalCount, ItemsPerPage]
+  note: >-
+    Maximum 100 results per page. Iterate by incrementing Page until Count is
+    less than ItemsPerPage or the accumulated items reach TotalCount.
+idempotency:
+  supported: true
+  mechanism: natural-key-upsert
+  key_field: MerchantProductNo
+  description: >-
+    ChannelEngine writes are idempotent by design rather than via an
+    Idempotency-Key header. Product create/update is an UPSERT keyed on the
+    merchant's own MerchantProductNo (purge-and-replace on default attributes),
+    and stock/price updates set absolute values — so re-sending the same payload
+    converges to the same state and is safe to retry. Order and return
+    acknowledge operations are likewise idempotent. There is no idempotency-key
+    request header.
+  retry_guidance: >-
+    Build retries on 4xx/5xx and on per-item validation errors; prefer
+    incremental updates and keep a manual full re-export path for recovery.
+rate_limiting:
+  style: header-based
+  headers:
+  - name: x-rate-limit-limit
+    meaning: rate limit interval in minutes
+  - name: x-rate-limit-remaining
+    meaning: remaining calls within the current interval
+  - name: retry-after
+    meaning: seconds to wait before retrying
+  exceeded_status: 429
+  scope: per-endpoint
+  see: conventions/channelengine-conventions.yml
+versioning:
+  scheme: uri-path
+  current: v2
+  see: lifecycle/channelengine-lifecycle.yml
+errors:
+  envelope_field: [StatusCode, Message, ValidationErrors]
+  see: errors/channelengine-problem-types.yml
+webhooks:
+  supported: true
+  see: asyncapi/channelengine-webhooks.yml

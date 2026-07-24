@@ -1,0 +1,52 @@
+generated: '2026-07-18'
+method: searched
+source: https://support.channelengine.com/hc/en-us/articles/10027831228829-Merchant-API-errors-and-response-codes
+format: http-status + json-envelope
+envelope:
+  fields: [StatusCode, LogId, Success, Message, ValidationErrors]
+  note: >-
+    ChannelEngine does not use RFC 9457 problem+json. Errors are conveyed by the
+    HTTP status code plus the standard JSON envelope; field-level issues are
+    itemized in ValidationErrors and a correlation id is returned in LogId.
+problems:
+- status: 400
+  title: Bad Request
+  meaning: >-
+    Malformed request or invalid field data — e.g. passing empty strings in a
+    field not intended to be cleared.
+  remediation: Validate payload shape and field values before sending.
+- status: 401
+  title: Unauthorized
+  meaning: The apikey is missing or unknown.
+  remediation: Verify the apikey query parameter and that the key is active for the tenant.
+- status: 403
+  title: Forbidden
+  meaning: The API key lacks permission for the requested resource or action.
+  remediation: Check the key's scope/role in Settings > Merchant API keys.
+- status: 404
+  title: Not Found
+  meaning: >-
+    Referenced resource is unknown to ChannelEngine — e.g. creating a shipment
+    for a product not on the original order, or a product reference that does
+    not exist.
+  remediation: Ensure referenced identifiers (order lines, product references) exist first.
+- status: 429
+  title: Too Many Requests
+  meaning: Per-endpoint rate limit exceeded.
+  remediation: >-
+    Honor x-rate-limit-remaining and retry-after; implement dynamic throttling.
+  headers: [x-rate-limit-limit, x-rate-limit-remaining, retry-after]
+- status: 500
+  title: Internal Server Error
+  meaning: >-
+    Server-side failure, including planned maintenance windows during which
+    updates cannot be processed.
+  remediation: >-
+    Log the LogId, mark affected data as not-exported, and retry later with a
+    full re-export path as backstop.
+- status: 200
+  title: Success with per-item validation errors
+  meaning: >-
+    Bulk product/offer submissions can return 200 while individual items fail —
+    surfaced in Message / ValidationErrors.
+  remediation: Always inspect ValidationErrors on 200 for bulk endpoints.

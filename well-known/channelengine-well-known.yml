@@ -1,0 +1,43 @@
+generated: '2026-07-18'
+method: searched
+source: live probes of /.well-known/ on ChannelEngine hosts
+note: >-
+  The Merchant/Channel data APIs authenticate with an API key (apikey query
+  parameter), not OAuth, so the API hosts expose no OIDC/OAuth discovery. The
+  well-known documents below belong to the ChannelEngine platform identity
+  provider (login.channelengine.net), which secures the web application and
+  supports client_credentials, authorization_code and refresh_token grants.
+hosts:
+- host: https://login.channelengine.net
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: channelengine-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: channelengine-oauth-authorization-server.json
+- host: https://www.channelengine.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://demo.channelengine.net
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+    note: returns the SPA login HTML shell, not a JSON discovery document
+  - path: /.well-known/ai-plugin.json
+    status: 404
+oidc:
+  issuer: https://login.channelengine.net/
+  authorization_endpoint: https://login.channelengine.net/connect/authorize
+  token_endpoint: https://login.channelengine.net/connect/token
+  grant_types_supported: [client_credentials, authorization_code, refresh_token]
+  scopes_supported: [openid, offline_access, email, roles, profile, permissions]

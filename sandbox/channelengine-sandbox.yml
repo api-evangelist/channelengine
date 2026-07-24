@@ -1,0 +1,29 @@
+generated: '2026-07-18'
+method: searched
+source:
+- https://support.channelengine.com/hc/en-us/articles/23076482713373-Merchant-API-test-orders
+- https://support.channelengine.com/hc/en-us/articles/10071769119901-Merchant-API-testing-flow
+- https://support.channelengine.com/hc/en-us/articles/4409513070749-ChannelEngine-how-to-create-a-test-marketplace-return
+model: tenant-environment
+note: >-
+  ChannelEngine does not expose a fixed shared sandbox host or magic test
+  values. Instead, each tenant can create separate environments (the paid plans
+  include 1-5 environments) and test against its own subdomain. Sandbox testing
+  is done by generating test orders and test marketplace returns inside a test
+  environment, then exercising the acknowledge/ship/return flows. Never invent
+  test identifiers — use the tenant's own environment.
+environments:
+  description: >-
+    Plans include multiple isolated environments (Start 1, Grow 3, Scale 5) so
+    integration testing runs against a non-production environment.
+  base_url: https://{subdomain}.channelengine.net/api
+test_flows:
+- name: Create test orders
+  docs: https://support.channelengine.com/hc/en-us/articles/23076482713373-Merchant-API-test-orders
+- name: Merchant API testing flow
+  docs: https://support.channelengine.com/hc/en-us/articles/10071769119901-Merchant-API-testing-flow
+- name: Create a test marketplace return
+  docs: https://support.channelengine.com/hc/en-us/articles/4409513070749-ChannelEngine-how-to-create-a-test-marketplace-return
+auth:
+  parameter: apikey
+  note: Each environment issues its own API key under Settings > Merchant API keys.

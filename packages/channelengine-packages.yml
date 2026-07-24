@@ -1,0 +1,115 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/channelengine
+note: >-
+  ChannelEngine publishes first-party OpenAPI-generated API clients for the
+  Merchant API and Channel API across seven languages via its GitHub org. As of
+  2024 these pre-generated clients are deprecated/archived; ChannelEngine now
+  recommends generating your own client from the OpenAPI specification with
+  OpenAPI Generator. They remain first-party and usable. Platform e-commerce
+  connectors (Magento 2 / Adobe Commerce, WooCommerce) are also first-party.
+packages:
+- language: php
+  registry: github
+  name: channelengine/merchant-api-client-php
+  url: https://github.com/channelengine/merchant-api-client-php
+  install: composer require channelengine/merchant-api-client-php
+  api: Merchant API
+  official: true
+  deprecated: true
+- language: php
+  registry: github
+  name: channelengine/channel-api-client-php
+  url: https://github.com/channelengine/channel-api-client-php
+  install: composer require channelengine/channel-api-client-php
+  api: Channel API
+  official: true
+  deprecated: true
+- language: csharp
+  registry: github
+  name: channelengine/merchant-api-client-csharp
+  url: https://github.com/channelengine/merchant-api-client-csharp
+  api: Merchant API
+  official: true
+  deprecated: true
+- language: csharp
+  registry: github
+  name: channelengine/channel-api-client-csharp
+  url: https://github.com/channelengine/channel-api-client-csharp
+  api: Channel API
+  official: true
+  deprecated: true
+- language: python
+  registry: github
+  name: channelengine/merchant-api-client-python
+  url: https://github.com/channelengine/merchant-api-client-python
+  api: Merchant API
+  official: true
+  deprecated: true
+- language: python
+  registry: github
+  name: channelengine/channel-api-client-python
+  url: https://github.com/channelengine/channel-api-client-python
+  api: Channel API
+  official: true
+  deprecated: true
+- language: java
+  registry: github
+  name: channelengine/merchant-api-client-java
+  url: https://github.com/channelengine/merchant-api-client-java
+  api: Merchant API
+  official: true
+  deprecated: true
+- language: java
+  registry: github
+  name: channelengine/channel-api-client-java
+  url: https://github.com/channelengine/channel-api-client-java
+  api: Channel API
+  official: true
+  deprecated: true
+- language: ruby
+  registry: github
+  name: channelengine/merchant-api-client-ruby
+  url: https://github.com/channelengine/merchant-api-client-ruby
+  api: Merchant API
+  official: true
+  deprecated: true
+- language: ruby
+  registry: github
+  name: channelengine/channel-api-client-ruby
+  url: https://github.com/channelengine/channel-api-client-ruby
+  api: Channel API
+  official: true
+  deprecated: true
+- language: swift
+  registry: github
+  name: channelengine/merchant-api-client-swift
+  url: https://github.com/channelengine/merchant-api-client-swift
+  api: Merchant API
+  official: true
+  deprecated: true
+- language: swift
+  registry: github
+  name: channelengine/channel-api-client-swift
+  url: https://github.com/channelengine/channel-api-client-swift
+  api: Channel API
+  official: true
+  deprecated: true
+- language: javascript
+  registry: github
+  name: channelengine/api-client-js
+  url: https://github.com/channelengine/api-client-js
+  api: Merchant API / Channel API
+  official: true
+  deprecated: true
+connectors:
+- name: Magento 2 / Adobe Commerce
+  url: https://github.com/channelengine/magento2
+  official: true
+- name: Adobe Commerce
+  url: https://github.com/channelengine/adobecommerce
+  official: true
+- name: WooCommerce
+  url: https://github.com/channelengine/woocommerce
+  official: true
+  deprecated: true

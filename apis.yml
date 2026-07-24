@@ -1,23 +1,177 @@
 aid: channelengine
-name: Channelengine
-description: Channelengine is a company surfaced as a portfolio company of general-catalyst and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+name: ChannelEngine
+description: >-
+  ChannelEngine is a marketplace integration and multichannel e-commerce
+  platform, founded in Leiden, Netherlands and backed by General Catalyst, that
+  lets brands, retailers, and manufacturers connect their ERP, PIM, WMS, or
+  webstore once and sell across 1,300+ global marketplaces, social platforms,
+  and emerging AI commerce channels. It centralizes product listing, inventory
+  and offer synchronization, order and fulfillment management, returns, and
+  dynamic repricing from a single dashboard, and exposes three REST APIs: the
+  Merchant API (integrate your own systems with ChannelEngine), the Channel API
+  (build your own marketplace on ChannelEngine), and the Channel Management API
+  (export marketplace categories and product attributes). The APIs use API-key
+  authentication, JSON response envelopes, page-based pagination, header-based
+  rate limiting, and webhooks for near-real-time events.
 url: https://raw.githubusercontent.com/api-evangelist/channelengine/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - general-catalyst
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enriched-from-provider-surface
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.channelengine.com/hubfs/ChannelEngine-Logomark.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-apis: []
+- E-commerce
+- Marketplace Integration
+- Multichannel Commerce
+- Order Management
+- Inventory Management
+- Product Information
+- Retail
+- Webhooks
+- Netherlands
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: TrustCenter
+  url: security/channelengine-trust-center.yml
+- type: DomainSecurity
+  url: security/channelengine-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/channelengine-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.channelengine.com/security
+- type: Website
+  url: https://www.channelengine.com/
+- type: DeveloperPortal
+  url: https://www.channelengine.com/developer-hub
+- type: Documentation
+  url: https://support.channelengine.com/hc/en-us/categories/4419833201937-APIs
+- type: APIReference
+  url: https://support.channelengine.com/hc/en-us/articles/25437375786013-ChannelEngine-API-references
+- type: GettingStarted
+  url: https://support.channelengine.com/hc/en-us/articles/10023835402397-Merchant-API-getting-started
+- type: Support
+  url: https://support.channelengine.com/hc/en-us
+- type: HelpCenter
+  url: https://support.channelengine.com/hc/en-us
+- type: Blog
+  url: https://www.channelengine.com/en/blog
+- type: GitHubOrganization
+  url: https://github.com/channelengine
+- type: Pricing
+  url: https://www.channelengine.com/pricing
+- type: SignUp
+  url: https://www.channelengine.net/login
+- type: Login
+  url: https://www.channelengine.net/login
+- type: PrivacyPolicy
+  url: https://www.channelengine.com/privacy-policy/
+- type: StatusPage
+  url: https://status.channelengine.com/
+- type: ChangeLog
+  url: https://support.channelengine.com/hc/en-us/articles/4409484849309-ChannelEngine-release-notes
+- type: Authentication
+  url: authentication/channelengine-authentication.yml
+- type: Packages
+  url: packages/channelengine-packages.yml
+- type: SDKs
+  url: packages/channelengine-packages.yml
+- type: WellKnown
+  url: well-known/channelengine-well-known.yml
+- type: MCPServer
+  url: mcp/channelengine-mcp.yml
+- type: LLMsTxt
+  url: llms/channelengine-llms.txt
+- type: Conventions
+  url: conventions/channelengine-conventions.yml
+- type: Idempotency
+  url: conventions/channelengine-conventions.yml
+- type: RateLimits
+  url: conventions/channelengine-conventions.yml
+- type: ErrorCatalog
+  url: errors/channelengine-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/channelengine-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/channelengine-lifecycle.yml
+- type: ChangeLog
+  url: changelog/channelengine-changelog.yml
+- type: Conformance
+  url: conformance/channelengine-conformance.yml
+- type: Compliance
+  url: https://www.channelengine.com/security
+- type: TrustCenter
+  url: https://www.channelengine.com/security
+- type: DataModel
+  url: data-model/channelengine-data-model.yml
+- type: Webhooks
+  url: asyncapi/channelengine-webhooks.yml
+- type: Sandbox
+  url: sandbox/channelengine-sandbox.yml
+- type: AgentSkill
+  url: skills/_index.yml
+apis:
+- name: ChannelEngine Merchant API
+  description: >-
+    Integrate the system of your choice (ERP, PIM, WMS, or webstore) with
+    ChannelEngine. Synchronize product content and offers; retrieve, acknowledge
+    and update orders, shipments, returns, cancellations and stock; manage
+    product bundles, competition prices, listed products, stock locations and
+    webhooks. API-key authenticated, JSON envelope responses, page-based
+    pagination (max 100 per page), header-based rate limiting.
+  humanURL: https://support.channelengine.com/hc/en-us/sections/4406511272733-Merchant-API
+  baseURL: https://demo.channelengine.net/api/v2/
+  properties:
+  - type: Documentation
+    url: https://support.channelengine.com/hc/en-us/sections/4406511272733-Merchant-API
+  - type: GettingStarted
+    url: https://support.channelengine.com/hc/en-us/articles/10023835402397-Merchant-API-getting-started
+  - type: RateLimits
+    url: https://support.channelengine.com/hc/en-us/articles/10027638693405-Merchant-API-rate-limiting
+- name: ChannelEngine Channel API
+  description: >-
+    Set up your own marketplace on ChannelEngine with automated connections
+    between your marketplace and partnering merchants. Synchronize product data
+    and offer changes, create and invoice orders, and handle shipments,
+    cancellations and returns between channel and merchant.
+  humanURL: https://support.channelengine.com/hc/en-us/sections/4406503369629-Channel-API
+  baseURL: https://demo.channelengine.net/api/v2/
+  properties:
+  - type: Documentation
+    url: https://support.channelengine.com/hc/en-us/articles/4409485647133-Channel-API-main-resources
+- name: ChannelEngine Channel Management API
+  description: >-
+    Export the categories and product data attributes of your marketplace to
+    ChannelEngine via a unified approach, so merchants can map and list against
+    your channel's taxonomy.
+  humanURL: https://support.channelengine.com/hc/en-us/articles/4409485647901-ChannelEngine-connect-to-the-Channel-Management-API
+  baseURL: https://demo.channelengine.net/api/v2/
+  properties:
+  - type: Documentation
+    url: https://support.channelengine.com/hc/en-us/articles/4409485647901-ChannelEngine-connect-to-the-Channel-Management-API
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

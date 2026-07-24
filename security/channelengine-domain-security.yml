@@ -1,0 +1,41 @@
+generated: '2026-07-18'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.channelengine.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 18 19:02:30 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: support.channelengine.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 26 23:42:59 2026 GMT
+  hsts: true
+  hsts_max_age: 259200
+- host: demo.channelengine.net
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep  4 23:07:41 2026 GMT
+  hsts: null
+domains:
+- domain: channelengine.com
+  dnssec: false
+  caa:
+  - 0 issue "amazon.com"
+  - 0 issue "pki.goog"
+  - 0 issue "digicert.com"
+  - 0 issue "letsencrypt.org"
+  - 0 issue "sectigo.com"
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
+- domain: channelengine.net
+  dnssec: false
+  caa:
+  - 0 issuewild "sectigo.com"
+  - 0 issuewild "letsencrypt.org"
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
