@@ -1,10 +1,8 @@
 generated: '2026-07-18'
 method: derived
 status: candidate
-source: >-
-  Derived from the ChannelEngine Merchant API operation surface
-  (channelengine/merchant-api-client-php). No official hosted MCP server was
-  found; this is a candidate tool list for building one.
+source: Derived from the ChannelEngine Merchant API operation surface (channelengine/merchant-api-client-php).
+  No official hosted MCP server was found; this is a candidate tool list for building one.
 server:
   name: channelengine
   transport: http
@@ -133,3 +131,9 @@ tools:
 - name: delete_webhook
   description: Delete a webhook subscription.
   source_operation: Merchant API#webhooksDelete
+deployment:
+  mode: none
+  verified: derived
+  tools: 41
+  checked: '2026-08-12'
+  source: catalog MCP census
