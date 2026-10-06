@@ -48,7 +48,7 @@ accessModel:
 image: https://www.channelengine.com/hubfs/ChannelEngine-Logomark.png
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-18'
+modified: '2026-10-06'
 tags:
 - Company
 - E-Commerce
@@ -77,6 +77,10 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- url: https://www.channelengine.com/en/blog/tag/category-news
+  type: Blog
+- url: https://www.channelengine.com/en/blog/rss.xml
+  type: BlogRSS
 - type: TrustCenter
   url: security/channelengine-trust-center.yml
 - type: DomainSecurity
