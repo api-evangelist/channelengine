@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/channelengine/integrations
+- https://n8n.io/integrations/channelengine/
+- https://composio.dev/toolkits/channelengine
+- https://monid.ai/tools/channelengine
+checked:
+- https://composio.dev/toolkits/channelengine
+- https://monid.ai/tools/channelengine
+- https://n8n.io/integrations/channelengine/
+- https://zapier.com/apps/channelengine/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
