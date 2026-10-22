@@ -15,6 +15,7 @@ checked:
 - https://advertising.amazon.com/partners/directory
 - https://sellercentral.amazon.com/gspn
 - https://sellercentral.amazon.com/selling-partner-appstore
+- adobe-commerce/integrations/adobe-commerce-integration-edges.yml
 summary: null
 marketplace_apps: []
 edges:
@@ -33,23 +34,6 @@ edges:
   seller_name: ChannelEngine
   detected_by: sweep-cloud-marketplaces.py
   detected: '2026-10-13'
-- partner_name: BigCommerce (own)
-  partner: bigcommerce
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://www.bigcommerce.com/apps/channelengine/
-  mirror_of: bigcommerce/integrations/bigcommerce-integration-edges.yml
-  apps:
-  - ChannelEngine
-  listing_count: 1
-  detected: '2026-10-20'
-  detected_by: mirror-platform-listings.py
-  category: Sales Channels, Marketplaces
 - partner_name: Amazon Selling Partner Appstore
   partner: amazon-seller-central
   partner_match: mirror
@@ -104,4 +88,38 @@ edges:
   detected_by: sweep-amazon-sp-api-appstore.py
   partner_tier:
   - VERIFIED_PARTNER
+- partner_name: BigCommerce (own)
+  partner: bigcommerce
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.bigcommerce.com/apps/channelengine/
+  mirror_of: bigcommerce/integrations/bigcommerce-integration-edges.yml
+  apps:
+  - ChannelEngine
+  listing_count: 1
+  detected: '2026-10-20'
+  detected_by: mirror-platform-listings.py
+  category: Sales Channels, Marketplaces
+- partner_name: Adobe Commerce (own)
+  partner: adobe-commerce
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://commercemarketplace.adobe.com/channelengine-magento2.html
+  mirror_of: adobe-commerce/integrations/adobe-commerce-integration-edges.yml
+  apps:
+  - ChannelEngine Marketplace Connector (v3)
+  listing_count: 1
+  detected: '2026-10-22'
+  detected_by: mirror-platform-listings.py
+  category: Adobe Commerce Marketplace extension
 templates: []

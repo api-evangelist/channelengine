@@ -15,19 +15,6 @@
   relationship: distribution-channel
   status: not-a-workflow
   arazzo: null
-- slug: channelengine-bigcommerce-own
-  label: BigCommerce (own)
-  partner: bigcommerce
-  partner_name: BigCommerce (own)
-  category: Sales Channels, Marketplaces
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://www.bigcommerce.com/apps/channelengine/
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: channelengine-amazon-selling-partner-appstore
   label: Amazon Selling Partner Appstore
   partner: amazon-seller-central
@@ -70,5 +57,31 @@
       Ads LEARNING certifications held by staff, not product conformance, never certified_products
     detected_by: sweep-amazon-sp-api-appstore.py
     detected: '2026-10-21'
+  status: not-a-workflow
+  arazzo: null
+- slug: channelengine-bigcommerce-own
+  label: BigCommerce (own)
+  partner: bigcommerce
+  partner_name: BigCommerce (own)
+  category: Sales Channels, Marketplaces
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.bigcommerce.com/apps/channelengine/
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: channelengine-adobe-commerce-own
+  label: Adobe Commerce (own)
+  partner: adobe-commerce
+  partner_name: Adobe Commerce (own)
+  category: Adobe Commerce Marketplace extension
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://commercemarketplace.adobe.com/channelengine-magento2.html
+  source: edge
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null
