@@ -1,4 +1,4 @@
-# Channelengine
+# ChannelEngine
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,6 +64,116 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Channelengine is a company surfaced as a portfolio company of general-catalyst and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+ChannelEngine is a marketplace integration and multichannel e-commerce platform, founded in Leiden, Netherlands and backed by General Catalyst, that lets brands, retailers, and manufacturers connect their ERP, PIM, WMS, or webstore once and sell across 1,300+ global marketplaces, social platforms, and emerging AI commerce channels. It centralizes product listing, inventory and offer synchronization, order and fulfillment management, returns, and dynamic repricing from a single dashboard, and exposes three REST APIs: the Merchant API (integrate your own systems with ChannelEngine), the Channel API (build your own marketplace on ChannelEngine), and the Channel Management API (export marketplace categories and product attributes). The APIs use API-key authentication, JSON response envelopes, page-based pagination, header-based rate limiting, and webhooks for near-real-time events.
 
-Backed by: general-catalyst
+**Areas:** Company · E-Commerce · Marketplace Integration · Multi-Channel Commerce · Order Management · Inventory · Product Information · Retail · Webhook · Netherlands
+
+## ChannelEngine on APIs.io
+
+Everything profiled for ChannelEngine is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/channelengine/](https://apis.io/providers/channelengine/)** — or go straight to one of the APIs or properties below.
+
+### APIs (3)
+
+- [ChannelEngine Merchant API](https://apis.io/apis/channelengine/channelengine-merchant-api/) — Integrate the system of your choice (ERP, PIM, WMS, or webstore) with ChannelEngine. Synchronize product content and offers; retrieve, acknowledge and…
+- [ChannelEngine Channel API](https://apis.io/apis/channelengine/channelengine-channel-api/) — Set up your own marketplace on ChannelEngine with automated connections between your marketplace and partnering merchants. Synchronize product data and…
+- [ChannelEngine Channel Management API](https://apis.io/apis/channelengine/channelengine-channel-management-api/) — Export the categories and product data attributes of your marketplace to ChannelEngine via a unified approach, so merchants can map and list against your…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Channelengine Webhooks](https://apis.io/asyncapis/channelengine/channelengine-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [channelengine](https://apis.io/servers/channelengine/channelengine/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Channelengine Authentication](https://apis.io/security/channelengine/channelengine-authentication/)
+- [Channelengine Domain Security](https://apis.io/security/channelengine/channelengine-domain-security/)
+- [Channelengine Trust Center](https://apis.io/security/channelengine/channelengine-trust-center/)
+- [Channelengine Vulnerability Disclosure](https://apis.io/security/channelengine/channelengine-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.channelengine.com/)
+- [Documentation](https://support.channelengine.com/hc/en-us/categories/4419833201937-APIs)
+- [Getting started](https://support.channelengine.com/hc/en-us/articles/10023835402397-Merchant-API-getting-started)
+- [API reference](https://support.channelengine.com/hc/en-us/articles/25437375786013-ChannelEngine-API-references)
+- [Pricing](https://www.channelengine.com/pricing)
+- [Sign up](https://www.channelengine.net/login)
+- [Support](https://support.channelengine.com/hc/en-us)
+- [Changelog](https://support.channelengine.com/hc/en-us/articles/4409484849309-ChannelEngine-release-notes)
+- [Blog](https://www.channelengine.com/en/blog/tag/category-news)
+- [Security](https://www.channelengine.com/security)
+- [Compliance](https://www.channelengine.com/security)
+- [Trust centre](https://www.channelengine.com/security)
+- [Privacy policy](https://www.channelengine.com/privacy-policy/)
+- [GitHub](https://github.com/channelengine)
+- [Status](https://status.channelengine.com/)
+
+## API Evangelist rating
+
+**Kin Score 54.7** — strong · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 78.6 |
+| Contract quality | 39.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 60.5 |
+| Developer ergonomics | 73.2 |
+| Access clarity | 50.0 |
+
+**Agent readiness 37.6** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | documented (partial credit) |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | yes |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 31.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/channelengine/](https://apis.io/providers/channelengine/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ChannelEngine: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/channelengine/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
